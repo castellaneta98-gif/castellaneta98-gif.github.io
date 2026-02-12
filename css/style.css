@@ -106,7 +106,7 @@ h1 {
 /* =========================
    Hamburger
 ========================= */
-.hamburger {
+.hamburger-menu {
   display: none;
   width: 40px;
   height: 36px;
@@ -121,7 +121,7 @@ h1 {
   position: relative;
   z-index: 220;
 }
-.hamburger span {
+.hamburger-menu span {
   display: block;
   width: 24px;
   height: 3px;
@@ -138,14 +138,14 @@ h1 {
 .nav-toggle {
   display: none;
 }
-.nav-toggle:checked + .hamburger span:first-child {
+.nav-toggle:checked + .hamburger-menu span:first-child {
   transform: translateY(10.7px) rotate(45deg);
 }
-.nav-toggle:checked + .hamburger span:nth-child(2) {
+.nav-toggle:checked + .hamburger-menu span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
-.nav-toggle:checked + .hamburger span:last-child {
+.nav-toggle:checked + .hamburger-menu span:last-child {
   transform: translateY(-10.7px) rotate(-45deg);
 }
 .nav-toggle:checked ~ .nav-menu {
@@ -156,7 +156,7 @@ h1 {
    Responsive
 ========================= */
 @media (max-width: 768px) {
-  .hamburger {
+  .hamburger-menu {
     display: flex;
   }
   .site-nav .nav-menu {
@@ -195,4 +195,36 @@ h1 {
     width: 32px;
     height: 32px;
   }
+}
+/* =========================
+   Contact Form
+========================= */
+.contact-form input,
+.contact-form textarea {
+  color: #fff;
+}
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  outline: none;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact-form button {
+  background: #fff;
+  color: #764ba2;
+  font-weight: 600;
+}
+.contact-form button:hover {
+  background: rgb(229.5, 229.5, 229.5);
 }/*# sourceMappingURL=style.css.map */

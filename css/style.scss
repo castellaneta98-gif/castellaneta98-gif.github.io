@@ -113,7 +113,7 @@ h1 {
 /* =========================
    Hamburger
 ========================= */
-.hamburger {
+.hamburger-menu {
   display: none;
   width: 40px;
   height: 36px;
@@ -149,7 +149,7 @@ h1 {
 .nav-toggle {
   display: none;
 
-  &:checked + .hamburger {
+  &:checked + .hamburger-menu {
     span:first-child {
       transform: translateY(10.7px) rotate(45deg);
     }
@@ -173,7 +173,7 @@ h1 {
    Responsive
 ========================= */
 @media (max-width: 768px) {
-  .hamburger {
+  .hamburger-menu {
     display: flex;
   }
 
@@ -220,3 +220,34 @@ h1 {
     height: 32px;
   }
 }
+
+/* =========================
+   Contact Form
+========================= */
+.contact-form input,
+.contact-form textarea {
+  color: $white;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: $white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  outline: none;
+  margin-top: 100px;
+  text-align: center;
+}
+.contact-form button {
+  background: $white;
+  color: $primary-end;
+  font-weight: 600;
+
+  &:hover {
+    background: darken($white, 10%);
+  }
+}
+
+
