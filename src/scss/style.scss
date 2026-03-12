@@ -1,0 +1,253 @@
+/* =========================
+   Variables
+========================= */
+$primary-start: #667eea;
+$primary-end: #764ba2;
+$white: #fff;
+$white-soft: #fefcfc;
+
+/* =========================
+   Header
+========================= */
+header {
+  background: linear-gradient(135deg, $primary-start 0%, $primary-end 100%);
+  box-shadow: 0 4px 12px rgba(252, 250, 250, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+/* =========================
+   Logo
+========================= */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.title {
+  text-decoration: none;
+  color: $white;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+/* =========================
+   Navigation
+========================= */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $white-soft;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      position: relative;
+      user-select: none;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fdfafa;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $white;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* =========================
+   Hamburger
+========================= */
+.hamburger-menu {
+  display: none;
+  width: 40px;
+  height: 36px;
+  padding: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fbf8f8;
+  position: relative;
+  z-index: 220;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #fffefe;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition:
+      transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 0.2s ease,
+      background-color 0.2s ease;
+    transform-origin: center;
+  }
+}
+
+/* =========================
+   Toggle checkbox
+========================= */
+.nav-toggle {
+  display: none;
+
+  &:checked + .hamburger-menu {
+    span:first-child {
+      transform: translateY(10.7px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    span:last-child {
+      transform: translateY(-10.7px) rotate(-45deg);
+    }
+  }
+
+  &:checked ~ .nav-menu {
+    display: flex;
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .site-nav .nav-menu {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: $primary-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 10px;
+    display: none;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    a {
+      width: 100%;
+      padding: 10px 14px;
+    }
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* =========================
+   Contact Form
+========================= */
+.contact-form input,
+.contact-form textarea {
+  color: $white;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: $white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  outline: none;
+  margin-top: 100px;
+  text-align: center;
+}
+.contact-form button {
+  background: $white;
+  color: $primary-end;
+  font-weight: 600;
+
+  &:hover {
+    background: darken($white, 10%);
+  }
+}
+
+
