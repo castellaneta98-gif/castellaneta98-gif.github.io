@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giuseppe Castellaneta - Portfolio</title>
+    <title>Contattami - Giuseppe Castellaneta</title>
 
     <!-- Meta tags -->
-    <meta name="description" content="Giuseppe Castellaneta - Programmatore in formazione appassionato di tecnologia e intelligenza artificiale">
+    <meta name="description" content="Contatta Giuseppe Castellaneta - Programmatore in formazione">
     <meta name="author" content="Giuseppe Castellaneta">
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Giuseppe Castellaneta - Portfolio">
-    <meta property="og:description" content="Programmatore in formazione appassionato di tecnologia e intelligenza artificiale">
+    <meta property="og:title" content="Contattami - Giuseppe Castellaneta">
+    <meta property="og:description" content="Contatta Giuseppe Castellaneta - Programmatore in formazione">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://castellaneta98-gif.github.io/">
+    <meta property="og:url" content="https://castellaneta98-gif.github.io/contattami.html">
     <meta property="og:image" content="https://castellaneta98-gif.github.io/assets/favicon-32x32.png">
 
     <!-- Favicon -->
@@ -46,22 +46,31 @@
     </nav>
 
     <main>
-        <section id="chisono">
-            <h2>CHI SONO</h2>
-            <p>Mi chiamo Giuseppe Castellaneta ho 28 anni e da poco ho iniziato ad avvicinarmi al settore della programmazione. Grazie al corso di Start2impact cose che credevo fossero impossibili ora iniziano a sembrarlo meno. Sono ancora un neofita e la strada è sicuramente lunga però giorno dopo giorno acquisisco nuove conoscenze e per una persona curiosa come me è una grande soddisfazione.</p>
-            <img src="./assets/foto di giuseppe.jpg" alt="Foto di Giuseppe Castellaneta" width="200">
-        </section>
-
-        <section id="hobby">
-            <h2>HOBBY</h2>
-            <p>Il mio hobby preferito è sicuramente guardare film e serie tv. Quando la storia è avvincente e coinvolgente mi appassiono e mi sento come se fossi dentro la storia stessa. Per il resto del mio tempo libero mi piace passarlo in compagnia di amici e facendo sport.</p>
-            <img src="./assets/immagine film e serie tv.jpg" alt="Immagine film e serie tv" width="200">
-        </section>
-
-        <section id="passioni">
-            <h2>PASSIONI</h2>
-            <p>Sono da sempre appassionato di tecnologia in generale ma non ho mai avuto il tempo di approfondirla. Ora che ho iniziato a studiare il mondo della programmazione, mi sento più motivato e appassionato di quanto non lo fossi prima. L'intelligenza artificiale poi è una delle cose che mi affascinano di più, ancora tutta da scoprire non solo per me ma anche per quello che sarà il futuro dato le sue enormi potenzialità.</p>
-            <img src="./assets/immagine ia.jpg" alt="Immagine intelligenza artificiale" width="400">
+        <section id="contatti">
+            <h2>CONTATTAMI</h2>
+            <div class="contact-wrap">
+                <form action="#" method="post" class="contact-form">
+                    <div class="input-block">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="cognome">Cognome</label>
+                        <input type="text" id="cognome" name="cognome" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                    </div>
+                    <div class="input-block">
+                        <button type="submit">Invia</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
