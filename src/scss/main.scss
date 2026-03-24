@@ -19,100 +19,102 @@ $white-soft: #fefcfc;
 
 body {
   background: linear-gradient(135deg, $body-start 0%, $body-end 100%);
-  color: $white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  color: $white-soft;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   padding: 0;
   margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
 /* =========================
    Navigation
+   (Overriding Bootstrap if needed)
 ========================= */
 .navbar {
-  background: linear-gradient(135deg, $primary-start 0%, $primary-end 100%);
-  box-shadow: 0 4px 12px rgba(252, 250, 250, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 15px 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(33, 37, 41, 0.9) !important;
 }
 
-.navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-brand img {
+  border-radius: 50%;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: $white;
-  font-weight: 600;
-  font-size: 18px;
+/* =========================
+   Hero / Header
+========================= */
+header.bg-primary {
+  background: transparent !important;
+}
 
-  img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.bg-primary {
+  background: linear-gradient(135deg, $primary-start 0%, $primary-end 100%) !important;
+}
+
+.text-primary {
+  color: $white !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, $primary-start 0%, $primary-end 100%) !important;
+  border: none !important;
+  
+  &:hover {
+    filter: brightness(1.1);
   }
 }
 
-.nav-toggle {
-  display: none;
-}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: $white-soft;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  .card-title {
+    color: $white;
+  }
+  
+  .card-text, .card-subtitle {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
 
-.hamburger-menu {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-
-  span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: $white;
-    margin: 5px 0;
-    transition: 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
   }
 }
 
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 24px;
+.bg-light {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: $white-soft;
+}
 
-  a {
-    text-decoration: none;
-    color: $white-soft;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: $white-soft;
+  
+  h5 { color: $white; }
+  p { color: rgba(255, 255, 255, 0.8); }
+}
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
+footer.bg-dark {
+  background: linear-gradient(135deg, #1a1e21 0%, #212529 100%) !important;
 }
 
 /* =========================
    Sections
 ========================= */
 section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-
+  padding: 60px 0;
+  
   h2 {
     font-size: 32px;
     margin-bottom: 20px;
@@ -122,22 +124,15 @@ section {
     font-size: 16px;
     margin-bottom: 20px;
   }
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+.img-fluid.rounded-circle {
+  border: 5px solid $white;
 }
 
 #chisono {
-  margin-top: 100px;
-
-  h2 {
-    text-align: right;
-  }
-
-  p {
-    text-align: right;
+  h2, p {
+    text-align: left;
   }
 
   img {
@@ -154,19 +149,15 @@ section {
 
   img {
     display: block;
-    margin: 40px 0 10px 50px;
+    margin: 20px auto;
     max-width: 390px;
   }
 }
 
 #passioni {
-  h2 {
-    text-align: center;
-  }
-
   img {
     display: block;
-    margin: 40px auto;
+    margin: 20px auto;
     max-width: 500px;
   }
 }
@@ -208,29 +199,51 @@ section {
   textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: rgba(255, 255, 255, 0.1);
+    font-family: 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.05);
     color: $white;
     text-align: left;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     &:focus {
       outline: none;
       border-color: $white;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 
   textarea {
     resize: vertical;
     min-height: 120px;
+  }
+
+  .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $white;
+    
+    &:focus {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: $white;
+      color: $white;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+    
+    & ~ label {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    &:focus ~ label, &:not(:placeholder-shown) ~ label {
+      color: $white;
+    }
   }
 
   button {
@@ -256,12 +269,11 @@ section {
    Footer
 ========================= */
 footer {
-  background: linear-gradient(135deg, $primary-start 0%, $primary-end 100%);
+  background: linear-gradient(135deg, #212529 0%, #343a40 100%) !important;
   color: $white-soft;
   text-align: center;
   padding: 40px 20px;
-  margin-top: 60px;
-  box-shadow: 0 -4px 12px rgba(252, 250, 250, 0.1);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 
   h3 {
     margin-bottom: 20px;
