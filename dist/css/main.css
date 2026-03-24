@@ -13,7 +13,7 @@
 body {
   background: linear-gradient(135deg, #7583b8 0%, #5b3187 100%);
   color: #fff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.6;
   padding: 0;
   margin: 0;
@@ -119,10 +119,10 @@ section img {
   margin-top: 100px;
 }
 #chisono h2 {
-  text-align: right;
+  text-align: center;
 }
 #chisono p {
-  text-align: right;
+  text-align: center;
 }
 #chisono img {
   display: block;
@@ -131,21 +131,27 @@ section img {
 }
 
 #hobby h2 {
-  text-align: left;
+  text-align: center;
+}
+#hobby p {
+  text-align: center;
 }
 #hobby img {
   display: block;
-  margin: 40px 0 10px 50px;
+  margin: 40px auto 10px auto;
   max-width: 390px;
 }
 
 #passioni h2 {
   text-align: center;
 }
+#passioni p {
+  text-align: center;
+}
 #passioni img {
   display: block;
   margin: 40px auto;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 #cv {
@@ -186,7 +192,7 @@ section img {
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   font-size: 16px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-align: left;
@@ -326,18 +332,19 @@ footer a img {
 }
 @media (min-width: 769px) {
   #chisono img {
-    float: left;
-    margin: 40px 20px 10px 0;
+    display: block;
+    margin: 40px auto;
     width: 240px;
   }
-  #hobby img {
-    float: right;
-    margin: 40px 0 10px 50px;
-    width: 420px;
+  #passioni img {
+    display: block;
+    margin: 40px auto;
+    width: 400px;
   }
-  #chisono,
-  #hobby {
-    overflow: auto;
+  #hobby img {
+    display: block;
+    margin: 40px auto;
+    width: 420px;
   }
 }
 @media (max-width: 480px) {
