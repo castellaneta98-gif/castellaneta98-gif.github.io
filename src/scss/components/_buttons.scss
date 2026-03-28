@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  font-family: $font-title;
+  font-weight: 600;
+  border-radius: 3.125rem;
+  padding: $spacing-sm $spacing-lg;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  @include transition-standard;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &-primary {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 0.25rem 0.9375rem rgba(63, 81, 181, 0.3);
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+      transform: translateY(-0.1875rem);
+      box-shadow: 0 0.375rem 1.25rem rgba(63, 81, 181, 0.4);
+      color: $color-white;
+    }
+  }
+
+  &-secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 188, 212, 0.3);
+
+    &:hover {
+      background-color: color.adjust($color-secondary, $lightness: -10%);
+      transform: translateY(-0.1875rem);
+      box-shadow: 0 0.375rem 1.25rem rgba(0, 188, 212, 0.4);
+      color: $color-white;
+    }
+  }
+
+  &-lg {
+    padding: $spacing-md $spacing-xl;
+    font-size: 1.1rem;
+  }
+}

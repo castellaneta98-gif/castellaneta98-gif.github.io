@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+%section-padding {
+  padding: $spacing-xl 0;
+  
+  @include respond-to("medium") {
+    padding: $spacing-md 0;
+  }
+}
+
+%card-hover {
+  @include transition-standard;
+  &:hover {
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+%title-underline {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $spacing-md;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.625rem;
+    width: 3.125rem;
+    height: 0.25rem;
+    background-color: $color-primary;
+    border-radius: 0.125rem;
+  }
+}

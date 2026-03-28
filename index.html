@@ -31,8 +31,8 @@
 <body class="pt-5">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top me-2">
+            <a class="navbar-brand d-flex align-items-center navbar__brand" href="index.html">
+                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top navbar__brand__logo">
                 <span>Giuseppe Castellaneta</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-content="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,83 +40,87 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Chi sono</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contattami.html">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link active" href="index.html">Chi sono</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="contattami.html">Contatti</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="text-white text-center py-5 mt-4">
+    <header class="header">
         <div class="container">
-            <h1 class="display-4 fw-bold text-uppercase">Benvenuti nel mio Portfolio</h1>
-            <p class="lead mb-0">Programmatore in formazione appassionato di tecnologia e intelligenza artificiale</p>
+            <h1 class="header__title">Benvenuti nel mio Portfolio</h1>
+            <p class="header__subtitle">Programmatore in formazione appassionato di tecnologia e intelligenza artificiale</p>
         </div>
     </header>
 
     <main class="container my-5">
-        <section id="chisono" class="mb-5">
+        <section id="chisono" class="home__section">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h2 class="border-bottom pb-2 text-uppercase">CHI SONO</h2>
-                    <p>Mi chiamo Giuseppe Castellaneta ho 28 anni e da poco ho iniziato ad avvicinarmi al settore della programmazione. Grazie al corso di Start2impact cose che credevo fossero impossibili ora iniziano a sembrarlo meno. Sono ancora un neofita e la strada è sicuramente lunga però giorno dopo giorno acquisisco nuove conoscenze e per una persona curiosa come me è una grande soddisfazione.</p>
+                    <h2 class="section-title">CHI SONO</h2>
+                    <div class="home__content-box">
+                        <p>Mi chiamo Giuseppe Castellaneta ho 28 anni e da poco ho iniziato ad avvicinarmi al settore della programmazione. Grazie al corso di Start2impact cose che credevo fossero impossibili ora iniziano a sembrarlo meno. Sono ancora un neofita e la strada è sicuramente lunga però giorno dopo giorno acquisisco nuove conoscenze e per una persona curiosa come me è una grande soddisfazione.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="./assets/foto di giuseppe.jpg" alt="Foto di Giuseppe Castellaneta" class="img-fluid rounded-circle shadow">
+                    <img src="./assets/foto di giuseppe.jpg" alt="Foto di Giuseppe Castellaneta" class="home__profile-img img-fluid rounded-circle shadow">
                 </div>
             </div>
         </section>
 
-        <section id="esperienze" class="mb-5 py-5 rounded shadow-sm">
-            <div class="container">
-                <h2 class="text-center mb-4 text-uppercase">LE MIE ESPERIENZE & SKILL</h2>
-                <div class="row g-4 text-center">
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Tecnologia</h3>
-                                <p class="card-text small">Appassionato di tutto ciò che riguarda il mondo tech e le sue evoluzioni.</p>
-                            </div>
+        <section id="esperienze" class="home__section">
+            <h2 class="section-title text-center d-block mx-auto">LE MIE ESPERIENZE & SKILL</h2>
+            <div class="row g-4 text-center mt-2">
+                <div class="col-md-4">
+                    <div class="card card--featured h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Tecnologia</h3>
+                            <p class="card__text">Appassionato di tutto ciò che riguarda il mondo tech e le sue evoluzioni.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Sviluppo Web</h3>
-                                <p class="card-text small">Conoscenze base di HTML, CSS e JavaScript in continua espansione.</p>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card--featured h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Sviluppo Web</h3>
+                            <p class="card__text">Conoscenze base di HTML, CSS e JavaScript in continua espansione.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">AI & Futuro</h3>
-                                <p class="card-text small">Studio e approfondimento delle potenzialità dell'Intelligenza Artificiale.</p>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card--featured h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">AI & Futuro</h3>
+                            <p class="card__text">Studio e approfondimento delle potenzialità dell'Intelligenza Artificiale.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="hobby" class="mb-5">
+        <section id="hobby" class="home__section">
             <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h2 class="border-bottom pb-2 text-uppercase">HOBBY</h2>
-                    <p>Il mio hobby preferito è sicuramente guardare film e serie tv. Quando la storia è avvincente e coinvolgente mi appassiono e mi sento come se fossi dentro la storia stessa. Per il resto del mio tempo libero mi piace passarlo in compagnia di amici e facendo sport.</p>
+                <div class="col-md-8 order-md-2">
+                    <h2 class="section-title">HOBBY</h2>
+                    <div class="home__content-box">
+                        <p>Il mio hobby preferito è sicuramente guardare film e serie tv. Quando la storia è avvincente e coinvolgente mi appassiono e mi sento come se fossi dentro la storia stessa. Per il resto del mio tempo libero mi piace passarlo in compagnia di amici e facendo sport.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center order-md-1">
                     <img src="./assets/immagine film e serie tv.jpg" alt="Immagine film e serie tv" class="img-fluid rounded shadow">
                 </div>
             </div>
         </section>
 
-        <section id="passioni" class="mb-5">
+        <section id="passioni" class="home__section">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h2 class="border-bottom pb-2 text-uppercase">PASSIONI</h2>
-                    <p>Sono da sempre appassionato di tecnologia in generale ma non ho mai avuto il tempo di approfondirla. Ora che ho iniziato a studiare il mondo della programmazione, mi sento più motivato e appassionato di quanto non lo fossi prima. L'intelligenza artificiale poi è una delle cose che mi affascinano di più, ancora tutta da scoprire non solo per me ma anche per quello che sarà il futuro dato le sue enormi potenzialità.</p>
+                    <h2 class="section-title">PASSIONI</h2>
+                    <div class="home__content-box">
+                        <p>Sono da sempre appassionato di tecnologia in generale ma non ho mai avuto il tempo di approfondirla. Ora che ho iniziato a studiare il mondo della programmazione, mi sento più motivato e appassionato di quanto non lo fossi prima. L'intelligenza artificiale poi è una delle cose che mi affascinano di più, ancora tutta da scoprire non solo per me ma anche per quello che sarà il futuro dato le sue enormi potenzialità.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="./assets/immagine ia.jpg" alt="Immagine intelligenza artificiale" class="img-fluid rounded shadow">
@@ -125,26 +129,24 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container text-center">
-            <h3 class="mb-3">Contatti</h3>
-            <p>Telefono: +39 333 123 4567</p>
-            <p>Email: <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></p>
-            <h3 class="mt-4 mb-3">Seguimi anche su:</h3>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoin.png" alt="LinkedIn" width="24" height="24" class="me-1">
-                    LinkedIn
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer__title">Seguimi anche su:</h3>
+            <div class="footer__socials">
+                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoin.png" alt="LinkedIn" class="footer__icon">
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logogit.png" alt="GitHub" width="24" height="24" class="me-1">
-                    GitHub
+                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logogit.png" alt="GitHub" class="footer__icon">
+                    <span>GitHub</span>
                 </a>
-                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoing.png" alt="Instagram" width="24" height="24" class="me-1">
-                    Instagram
+                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoing.png" alt="Instagram" class="footer__icon">
+                    <span>Instagram</span>
                 </a>
             </div>
+            <p class="footer__copyright">&copy; 2026 Giuseppe Castellaneta. Tutti i diritti riservati.</p>
         </div>
     </footer>
 

@@ -1,0 +1,9 @@
+dist/css/*.map
+node_modules/
+.DS_Store
+/.idea/castellaneta98-gif.github.io.iml
+/src/scss/main.css.map
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/watcherTasks.xml
+/.idea/.gitignore

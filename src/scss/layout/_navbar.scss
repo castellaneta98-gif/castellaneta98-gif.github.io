@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.navbar {
+  @include glassmorphism;
+  padding: $spacing-sm 0;
+  
+  &__brand {
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color-primary !important;
+    
+    &__logo {
+      margin-right: $spacing-xs;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.0625rem;
+    padding: $spacing-xs $spacing-sm !important;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0.125rem;
+      bottom: 0;
+      left: 50%;
+      background-color: $color-primary;
+      @include transition-standard;
+      transform: translateX(-50%);
+    }
+
+    &:hover, &.active {
+      color: $color-primary !important;
+      
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+}

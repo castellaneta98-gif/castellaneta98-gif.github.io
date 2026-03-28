@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  background: $color-bg-dark;
+  color: $color-white;
+  padding: $spacing-xl 0 $spacing-md;
+  text-align: center;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
+    font-family: $font-title;
+    color: $color-secondary;
+  }
+
+  &__socials {
+    @include flex-center;
+    gap: $spacing-lg;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-lg;
+    
+    @include respond-to("medium") {
+      gap: $spacing-md;
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    @include transition-standard;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.7);
+    @include transition-standard;
+    @include flex-center;
+    flex-direction: column;
+    gap: $spacing-xs;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+
+    &:hover {
+      color: $color-white;
+      transform: translateY(-0.1875rem);
+
+      .footer__icon {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
+    padding-top: $spacing-md;
+    margin-top: $spacing-md;
+  }
+}

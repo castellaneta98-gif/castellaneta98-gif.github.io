@@ -31,8 +31,8 @@
 <body class="pt-5">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top me-2">
+            <a class="navbar-brand d-flex align-items-center navbar__brand" href="index.html">
+                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top navbar__brand__logo">
                 <span>Giuseppe Castellaneta</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,104 +40,98 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Chi sono</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contattami.html">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="index.html">Chi sono</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link active" href="contattami.html">Contatti</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="text-white text-center py-5 mt-4">
+    <header class="header">
         <div class="container">
-            <h1 class="display-4 fw-bold text-uppercase">Contattami</h1>
-            <p class="lead mb-0">Hai una domanda o vuoi collaborare? Scrivimi pure!</p>
+            <h1 class="header__title">Contattami</h1>
+            <p class="header__subtitle">Hai una domanda o vuoi collaborare? Scrivimi pure!</p>
         </div>
     </header>
 
     <main class="container my-5">
         <section id="contatti" class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4">
-                        <h2 class="h4 mb-4 text-center text-uppercase">MODULO DI CONTATTO</h2>
-                        <form action="#" method="post" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
-                                        <label for="nome">Nome</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Cognome" required>
-                                        <label for="cognome">Cognome</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="nome@esempio.com" required>
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="messaggio" name="messaggio" placeholder="Lascia un messaggio" style="height: 150px" required></textarea>
-                                        <label for="messaggio">Messaggio</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg px-5">Invia Messaggio</button>
+            <div class="col-md-10 col-lg-8">
+                <div class="contact-form">
+                    <h2 class="section-title text-center d-block mx-auto">MODULO DI CONTATTO</h2>
+                    <form action="#" method="post">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="contact-form__group">
+                                    <label for="nome" class="contact-form__label">Nome</label>
+                                    <input type="text" class="form-control contact-form__control" id="nome" name="nome" placeholder="Il tuo nome" required>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <div class="contact-form__group">
+                                    <label for="cognome" class="contact-form__label">Cognome</label>
+                                    <input type="text" class="form-control contact-form__control" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="contact-form__group">
+                                    <label for="email" class="contact-form__label">Email</label>
+                                    <input type="email" class="form-control contact-form__control" id="email" name="email" placeholder="nome@esempio.com" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="contact-form__group">
+                                    <label for="messaggio" class="contact-form__label">Messaggio</label>
+                                    <textarea class="form-control contact-form__control" id="messaggio" name="messaggio" placeholder="Come posso aiutarti?" style="height: 150px" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Invia Messaggio</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
         
-        <section id="altri-contatti" class="mt-5 py-5 text-center rounded shadow-sm">
-            <div class="container">
-                <h2 class="h4 mb-4 text-uppercase">ALTRA INFO DI CONTATTO</h2>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-4">
-                        <div class="card p-3 shadow-sm border-0">
-                            <h5 class="mb-2">Sede</h5>
-                            <p class="mb-0">Mottola (TA), Italia</p>
-                        </div>
+        <section id="altri-contatti" class="mt-5">
+            <h2 class="section-title text-center d-block mx-auto">ALTRA INFO DI CONTATTO</h2>
+            <div class="row g-4 justify-content-center mt-2">
+                <div class="col-md-5">
+                    <div class="contact-form__info-card">
+                        <h5 class="fw-bold mb-3">Sede</h5>
+                        <p class="mb-0">Mottola (TA), Italia</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 shadow-sm border-0">
-                            <h5 class="mb-2">Disponibilità</h5>
-                            <p class="mb-0">Lunedì - Venerdì: 09:00 - 18:00</p>
-                        </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="contact-form__info-card">
+                        <h5 class="fw-bold mb-3">Disponibilità</h5>
+                        <p class="mb-0">Lunedì - Venerdì: 09:00 - 18:00</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container text-center">
-            <h3 class="mb-3">Contatti</h3>
-            <p>Telefono: +39 333 123 4567</p>
-            <p>Email: <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></p>
-            <h3 class="mt-4 mb-3">Seguimi anche su:</h3>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoin.png" alt="LinkedIn" width="24" height="24" class="me-1">
-                    LinkedIn
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer__title">Seguimi anche su:</h3>
+            <div class="footer__socials">
+                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoin.png" alt="LinkedIn" class="footer__icon">
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logogit.png" alt="GitHub" width="24" height="24" class="me-1">
-                    GitHub
+                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logogit.png" alt="GitHub" class="footer__icon">
+                    <span>GitHub</span>
                 </a>
-                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoing.png" alt="Instagram" width="24" height="24" class="me-1">
-                    Instagram
+                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoing.png" alt="Instagram" class="footer__icon">
+                    <span>Instagram</span>
                 </a>
             </div>
+            <p class="footer__copyright">&copy; 2026 Giuseppe Castellaneta. Tutti i diritti riservati.</p>
         </div>
     </footer>
 

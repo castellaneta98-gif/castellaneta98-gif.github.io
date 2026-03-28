@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.card {
+  background-color: $color-white;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  @extend %card-hover;
+
+  &__body {
+    padding: $spacing-md;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-sm;
+    color: $color-primary;
+  }
+
+  &__text {
+    color: $color-text-muted;
+    font-size: 0.95rem;
+  }
+
+  &--featured {
+    border-top: 0.25rem solid $color-secondary;
+  }
+}
