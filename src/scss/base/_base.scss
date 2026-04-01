@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-bg-light;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include transition-standard;
+}
+
+section {
+  @extend %section-padding;
+}
+
+.section-title {
+  @extend %title-underline;
+  font-size: 2.25rem;
+  
+  @include respond-to("medium") {
+    font-size: 1.75rem;
+  }
+}

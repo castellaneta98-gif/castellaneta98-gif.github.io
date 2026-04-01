@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
+  color: $color-white;
+  padding: $spacing-xl 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/favicon-32x32.png') repeat;
+    opacity: 0.05;
+    z-index: 0;
+  }
+
+  & > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: $spacing-sm;
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    
+    @include respond-to("medium") {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 37.5rem;
+    margin: 0 auto;
+  }
+}

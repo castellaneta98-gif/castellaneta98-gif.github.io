@@ -31,8 +31,8 @@
 <body class="pt-5">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top me-2">
+            <a class="navbar-brand d-flex align-items-center navbar__brand" href="index.html">
+                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top navbar__brand__logo">
                 <span>Giuseppe Castellaneta</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,74 +40,74 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Chi sono</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contattami.html">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="index.html">Chi sono</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link active" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="contattami.html">Contatti</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="text-white text-center py-5 mt-4">
+    <header class="header">
         <div class="container">
-            <h1 class="display-4 fw-bold text-uppercase">Curriculum Vitae</h1>
-            <p class="lead mb-0">Il mio percorso formativo e professionale</p>
+            <h1 class="header__title">Curriculum Vitae</h1>
+            <p class="header__subtitle">Il mio percorso formativo e professionale</p>
         </div>
     </header>
 
     <main class="container my-5">
-        <section id="cv-intro" class="mb-5 text-center rounded shadow-sm">
-            <div class="card border-0 shadow-sm p-4">
-                <h2 class="h4 mb-3 text-uppercase">QUI PUOI TROVARE IL MIO CV AGGIORNATO</h2>
-                <p class="mb-0">Per maggiori dettagli sulle mie competenze e progetti, continua a scorrere.</p>
-            </div>
+        <section id="cv-intro" class="cv__intro">
+            <h2 class="section-title">QUI PUOI TROVARE IL MIO CV AGGIORNATO</h2>
+            <p class="mb-0">Per maggiori dettagli sulle mie competenze e progetti, continua a scorrere.</p>
         </section>
 
         <section id="bio" class="mb-5">
-            <h2 class="border-bottom pb-2 mb-4 text-uppercase">BIO</h2>
-            <div class="row g-3">
-                <div class="col-sm-6">
-                    <p><strong>Nome:</strong> Giuseppe</p>
-                    <p><strong>Cognome:</strong> Castellaneta</p>
-                    <p><strong>Data di nascita:</strong> 22/01/1997</p>
+            <h2 class="section-title">BIO</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <ul class="cv__bio-list">
+                        <li><strong>Nome:</strong> Giuseppe</li>
+                        <li><strong>Cognome:</strong> Castellaneta</li>
+                        <li><strong>Data di nascita:</strong> 22/01/1997</li>
+                    </ul>
                 </div>
-                <div class="col-sm-6">
-                    <p><strong>Luogo di nascita:</strong> Mottola (TA)</p>
-                    <p><strong>Indirizzo:</strong> Via Ponchielli, 9 - Mottola (TA)</p>
-                    <p><strong>Email:</strong> <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></p>
+                <div class="col-md-6">
+                    <ul class="cv__bio-list">
+                        <li><strong>Luogo di nascita:</strong> Mottola (TA)</li>
+                        <li><strong>Indirizzo:</strong> Via Ponchielli, 9 - Mottola (TA)</li>
+                        <li><strong>Email:</strong> <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="esperienze" class="mb-5 py-5 rounded shadow-sm">
-            <div class="container">
-                <h2 class="text-center mb-4 text-uppercase">ESPERIENZE LAVORATIVE</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Barista</h3>
-                                <h6 class="card-subtitle mb-2 text-muted">Gallitelli s.r.l.</h6>
-                                <p class="card-text small text-secondary">Gestione servizio clienti e caffetteria.</p>
-                            </div>
+        <section id="esperienze" class="mb-5">
+            <h2 class="section-title">ESPERIENZE LAVORATIVE</h2>
+            <div class="cv__timeline">
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Barista</h3>
+                            <h6 class="text-muted mb-2">Gallitelli s.r.l.</h6>
+                            <p class="card__text">Gestione servizio clienti e caffetteria.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Operatore macchine da stampa</h3>
-                                <h6 class="card-subtitle mb-2 text-muted">Stampa Sud spa</h6>
-                                <p class="card-text small text-secondary">Conduzione e manutenzione impianti di stampa.</p>
-                            </div>
+                </div>
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Operatore macchine da stampa</h3>
+                            <h6 class="text-muted mb-2">Stampa Sud spa</h6>
+                            <p class="card__text">Conduzione e manutenzione impianti di stampa.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Cameriere</h3>
-                                <h6 class="card-subtitle mb-2 text-muted">Varie strutture</h6>
-                                <p class="card-text small text-secondary">Servizio ai tavoli e gestione della sala.</p>
-                            </div>
+                </div>
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Cameriere</h3>
+                            <h6 class="text-muted mb-2">Varie strutture</h6>
+                            <p class="card__text">Servizio ai tavoli e gestione della sala.</p>
                         </div>
                     </div>
                 </div>
@@ -115,62 +115,77 @@
         </section>
 
         <section id="istruzione" class="mb-5">
-            <h2 class="border-bottom pb-2 mb-4 text-uppercase">ISTRUZIONE</h2>
-            <div class="list-group shadow-sm">
-                <div class="list-group-item">
-                    <h5 class="mb-1">Corso di programmazione e agenti IA</h5>
-                    <p class="mb-1">Start2impact</p>
+            <h2 class="section-title">ISTRUZIONE</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Corso di programmazione e agenti IA</h3>
+                            <p class="card__text">Start2impact</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1">Attestato SAP FI-CO</h5>
-                    <p class="mb-1">Innovaformazione</p>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Attestato SAP FI-CO</h3>
+                            <p class="card__text">Innovaformazione</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="list-group-item">
-                    <h5 class="mb-1">Maturità classica</h5>
-                    <p class="mb-1">2011-2016</p>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Maturità classica</h3>
+                            <p class="card__text">2011-2016</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="competenze" class="mb-5 p-4 rounded shadow">
-            <h2 class="h3 mb-4 text-uppercase text-center">COMPETENZE & INFO</h2>
-            <div class="row g-4 text-center">
+        <section id="competenze" class="mb-5">
+            <h2 class="section-title text-center d-block mx-auto">COMPETENZE & INFO</h2>
+            <div class="row g-4 text-center mt-2">
                 <div class="col-md-4">
-                    <h4 class="h5">Tecniche</h4>
-                    <p>HTML, CSS, JavaScript, SAP FI-CO</p>
+                    <h4 class="h5 fw-bold">Tecniche</h4>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <span class="cv__skill-tag">HTML</span>
+                        <span class="cv__skill-tag">CSS</span>
+                        <span class="cv__skill-tag">JavaScript</span>
+                        <span class="cv__skill-tag">SAP FI-CO</span>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="h5">Lingue</h4>
+                    <h4 class="h5 fw-bold">Lingue</h4>
                     <p>Italiano (Madrelingua)<br>Inglese (Intermedio)</p>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="h5">Altro</h4>
+                    <h4 class="h5 fw-bold">Altro</h4>
                     <p>Patente di guida: B</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container text-center">
-            <h3 class="mb-3">Contatti</h3>
-            <p>Telefono: +39 333 123 4567</p>
-            <p>Email: <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></p>
-            <h3 class="mt-4 mb-3">Seguimi anche su:</h3>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoin.png" alt="LinkedIn" width="24" height="24" class="me-1">
-                    LinkedIn
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer__title">Seguimi anche su:</h3>
+            <div class="footer__socials">
+                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoin.png" alt="LinkedIn" class="footer__icon">
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logogit.png" alt="GitHub" width="24" height="24" class="me-1">
-                    GitHub
+                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logogit.png" alt="GitHub" class="footer__icon">
+                    <span>GitHub</span>
                 </a>
-                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
-                    <img src="./assets/logoing.png" alt="Instagram" width="24" height="24" class="me-1">
-                    Instagram
+                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoing.png" alt="Instagram" class="footer__icon">
+                    <span>Instagram</span>
                 </a>
             </div>
+            <p class="footer__copyright">&copy; 2026 Giuseppe Castellaneta. Tutti i diritti riservati.</p>
         </div>
     </footer>
 

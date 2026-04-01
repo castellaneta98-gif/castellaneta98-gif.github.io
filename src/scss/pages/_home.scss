@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.home {
+  &__section {
+    margin-bottom: $spacing-xl;
+    
+    @include respond-to("medium") {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__profile-img {
+    border: 0.3125rem solid $color-white;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+    max-width: 18.75rem;
+    margin: 0 auto;
+    @include transition-standard;
+
+    &:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+  }
+
+  &__content-box {
+    padding: $spacing-md;
+    background-color: $color-white;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
+  }
+
+  &__skills-grid {
+    background-color: transparent;
+    padding: $spacing-md 0;
+  }
+}

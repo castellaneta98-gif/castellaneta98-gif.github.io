@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.contact-form {
+  background-color: $color-white;
+  padding: $spacing-lg;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.05);
+
+  &__group {
+    margin-bottom: $spacing-md;
+    position: relative;
+  }
+
+  &__control {
+    border: 0.125rem solid $color-bg-light !important;
+    border-radius: 0.5rem !important;
+    padding: $spacing-sm $spacing-md !important;
+    font-size: 1rem !important;
+    @include transition-standard;
+    background-color: $color-bg-light !important;
+
+    &:focus {
+      border-color: $color-primary !important;
+      background-color: $color-white !important;
+      box-shadow: 0 0 0 0.25rem rgba($color-primary, 0.1) !important;
+    }
+    
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    color: $color-text-muted;
+    margin-bottom: $spacing-xs;
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03125rem;
+  }
+
+  &__info-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-lg;
+    background-color: $color-white;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
+    @include transition-standard;
+
+    &:hover {
+      transform: translateY(-0.3125rem);
+      box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.1);
+      border-bottom: 0.25rem solid $color-secondary;
+    }
+
+    i, svg, .icon {
+      font-size: 2rem;
+      color: $color-primary;
+      margin-bottom: $spacing-sm;
+    }
+  }
+}
