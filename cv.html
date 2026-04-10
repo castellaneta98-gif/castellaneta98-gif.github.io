@@ -22,26 +22,36 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-32x32.png">
 
     <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preload" as="style" href="./dist/css/main.css">
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a class="navbar-brand" href="index.html">
-                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta">
+<body class="pt-5">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center navbar__brand" href="index.html">
+                <img src="./assets/favicon-32x32.png" alt="Logo Giuseppe Castellaneta" width="30" height="30" class="d-inline-block align-text-top navbar__brand__logo">
                 <span>Giuseppe Castellaneta</span>
             </a>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-            <label for="nav-toggle" class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <input type="checkbox" id="nav-toggle" class="navbar__checkbox" aria-label="Menu">
+            <label for="nav-toggle" class="navbar__toggler">
+                <span class="navbar__toggler-icon"></span>
             </label>
-            <ul class="nav-menu">
-                <li><a href="index.html">Chi sono</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contattami.html">Contatti</a></li>
-            </ul>
+            <div class="navbar__collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link navbar__link" href="index.html">Chi sono</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link active" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link navbar__link" href="contattami.html">Contatti</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -63,40 +73,111 @@
             <p>Operatore macchine da stampa presso Stampa Sud spa</p>
             <p>Cameriere presso diverse strutture della mia zona</p>
 
-            <h2>ISTRUZIONE</h2>
-            <p>Maturità classica 2011-2016</p>
-            <p>Attestato di partecipazione al corso SAP moduli FI-CO presso Innovaformazione</p>
-            <p>Corso di programmazione e agenti IA presso Start2impact</p>
+        <section id="esperienze" class="mb-5">
+            <h2 class="section-title">ESPERIENZE LAVORATIVE</h2>
+            <div class="cv__timeline">
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Barista</h3>
+                            <h4 class="h6 text-muted mb-2">Gallitelli s.r.l.</h4>
+                            <p class="card__text">Gestione servizio clienti e caffetteria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Operatore macchine da stampa</h3>
+                            <h4 class="h6 text-muted mb-2">Stampa Sud spa</h4>
+                            <p class="card__text">Conduzione e manutenzione impianti di stampa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cv__timeline-item">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Cameriere</h3>
+                            <h4 class="h6 text-muted mb-2">Varie strutture</h4>
+                            <p class="card__text">Servizio ai tavoli e gestione della sala.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>COMPETENZE</h2>
-            <p>HTML, CSS, JavaScript, SAP FI-CO</p>
-            <p><strong>Italiano (madrelingua), Inglese (intermedio)</strong></p>
-            <p><strong>Patente di guida:</strong> B</p>
+        <section id="istruzione" class="mb-5">
+            <h2 class="section-title">ISTRUZIONE</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Corso di programmazione e agenti IA</h3>
+                            <p class="card__text">Start2impact</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Attestato SAP FI-CO</h3>
+                            <p class="card__text">Innovaformazione</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card__body">
+                            <h3 class="card__title">Maturità classica</h3>
+                            <p class="card__text">2011-2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competenze" class="mb-5">
+            <h2 class="section-title text-center d-block mx-auto">COMPETENZE & INFO</h2>
+            <div class="row g-4 text-center mt-2">
+                <div class="col-md-4">
+                    <h3 class="h5 fw-bold">Tecniche</h3>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <span class="cv__skill-tag">HTML</span>
+                        <span class="cv__skill-tag">CSS</span>
+                        <span class="cv__skill-tag">JavaScript</span>
+                        <span class="cv__skill-tag">SAP FI-CO</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5 fw-bold">Lingue</h3>
+                    <p>Italiano (Madrelingua)<br>Inglese (Intermedio)</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5 fw-bold">Altro</h3>
+                    <p>Patente di guida: B</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <h3>Contatti</h3>
-        <p>Telefono: +39 333 123 4567</p>
-        <p>Email: <span style="unicode-bidi: bidi-override; direction: rtl;">moc.elpmaxe@9atenalletsac</span></p>
-        <h3>Seguimi anche su:</h3>
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/logoin.png" alt="Logo LinkedIn">
-                    LinkedIn
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer__title">Seguimi anche su:</h3>
+            <div class="footer__socials">
+                <a href="https://www.linkedin.com/in/giuseppe-castellaneta-b7040b205/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logoin.png" alt="" width="40" height="40" class="footer__icon">
+                    <span>LinkedIn</span>
                 </a>
-            </li>
-            <li>
-                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/logogit.png" alt="Logo GitHub">
-                    GitHub
+                <a href="https://github.com/giuseppecastellaneta" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <img src="./assets/logogit.png" alt="" width="40" height="40" class="footer__icon">
+                    <span>GitHub</span>
                 </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/logoing.png" alt="Logo Instagram">
-                    Instagram
+                <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <picture>
+                        <source srcset="./assets/logoing.webp" type="image/webp">
+                        <img src="./assets/logoing.png" alt="" width="40" height="40" class="footer__icon">
+                    </picture>
+                    <span>Instagram</span>
                 </a>
             </li>
         </ul>

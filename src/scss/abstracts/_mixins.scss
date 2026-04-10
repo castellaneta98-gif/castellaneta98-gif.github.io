@@ -1,0 +1,28 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 36rem) { @content; }
+  } @else if $breakpoint == "medium" {
+    @media (max-width: 48rem) { @content; }
+  } @else if $breakpoint == "large" {
+    @media (max-width: 62rem) { @content; }
+  } @else if $breakpoint == "extra-large" {
+    @media (max-width: 75rem) { @content; }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin glassmorphism {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(0.625rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.1);
+}
+
+@mixin transition-standard {
+  transition: all 0.3s ease-in-out;
+}
