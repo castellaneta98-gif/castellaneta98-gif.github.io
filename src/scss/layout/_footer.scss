@@ -2,55 +2,62 @@
 @use "../abstracts/mixins" as *;
 
 .footer {
-  background-color: #1a1a1a;
+  background: #121826;
   color: $color-white;
-  padding: $spacing-lg 0 $spacing-md;
+  padding: 4rem 0 2rem;
   text-align: center;
   
   &__title {
-    margin-bottom: $spacing-md;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
     font-family: $font-title;
+    color: $color-secondary;
   }
   
   &__socials {
     @include flex-center;
-    gap: $spacing-md;
+    gap: 3rem;
     flex-wrap: wrap;
-    margin-bottom: $spacing-md;
+    margin-bottom: 3rem;
+
+    @include respond-to("medium") {
+      gap: 2rem;
+    }
   }
   
   &__link {
     @include flex-center;
     flex-direction: column;
-    gap: $spacing-xs;
-    color: rgba($color-white, 0.8);
+    gap: 0.5rem;
+    color: rgba($color-white, 0.7);
     font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
     
     &:hover {
       color: $color-white;
-      transform: translateY(-0.25rem);
+      transform: translateY(-0.1875rem);
     }
   }
   
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.8;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba($color-white, 0.1);
     @include transition-standard;
     
     .footer__link:hover & {
-      opacity: 1;
+      background-color: $color-primary;
     }
   }
   
   &__copyright {
     font-size: 0.8rem;
-    color: rgba($color-white, 0.5);
-    border-top: 1px solid rgba($color-white, 0.1);
-    padding-top: $spacing-md;
-    margin-top: $spacing-md;
+    color: rgba($color-white, 0.7);
+    border-top: 0.0625rem solid rgba($color-white, 0.1);
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
 }

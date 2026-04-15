@@ -3,14 +3,14 @@
 
 .navbar {
   @include glassmorphism;
-  padding: $spacing-sm 0;
+  padding: 1rem 0;
   @include transition-standard;
   
   &__brand {
     font-family: $font-title;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #283593 !important;
+    color: #1a237e !important;
     display: flex;
     align-items: center;
     gap: $spacing-xs;
@@ -85,7 +85,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      padding: $spacing-md;
+      padding: 2rem;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
       z-index: 1000;
       display: none; // Initial hide
@@ -121,8 +121,9 @@
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.0625rem;
-    padding: $spacing-xs $spacing-sm !important;
+    padding: 0.5rem 1rem !important;
     position: relative;
+    color: #1a237e !important;
     
     &::after {
       content: '';
