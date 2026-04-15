@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  color: $color-text;
+  line-height: 1.6;
+  background-color: $color-bg;
+  overflow-x: hidden;
+
+  &:has(.navbar__checkbox:checked) {
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include transition-standard;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: $spacing-lg 0;
+  
+  &-title {
+    text-align: center;
+    margin-bottom: $spacing-md;
+    position: relative;
+    text-transform: uppercase;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 3rem;
+      height: 0.25rem;
+      background-color: $color-primary;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

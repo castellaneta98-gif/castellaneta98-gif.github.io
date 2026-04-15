@@ -55,29 +55,29 @@
         </div>
     </nav>
 
-    <main>
-        <section id="contatti">
-            <h2>CONTATTAMI</h2>
-            <div class="contact-wrap">
-                <form action="#" method="post" class="contact-form">
-                    <div class="input-block">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" required>
+    <main class="container my-5">
+        <section id="contatti" class="section">
+            <h2 class="section-title">CONTATTAMI</h2>
+            <div class="contact__form shadow">
+                <form action="#" method="post" class="needs-validation">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Il tuo nome" required>
                     </div>
-                    <div class="input-block">
-                        <label for="cognome">Cognome</label>
-                        <input type="text" id="cognome" name="cognome" required>
+                    <div class="mb-3">
+                        <label for="cognome" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
                     </div>
-                    <div class="input-block">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="nome@esempio.com" required>
                     </div>
-                    <div class="input-block">
-                        <label for="messaggio">Messaggio</label>
-                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                    <div class="mb-3">
+                        <label for="messaggio" class="form-label">Messaggio</label>
+                        <textarea class="form-control" id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
                     </div>
-                    <div class="input-block">
-                        <button type="submit">Invia</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary px-5 py-2">Invia</button>
                     </div>
                 </form>
             </div>
@@ -97,14 +97,12 @@
                     <span>GitHub</span>
                 </a>
                 <a href="https://www.instagram.com/castellanetagiuseppe/" target="_blank" rel="noopener noreferrer" class="footer__link">
-                    <picture>
-                        <source srcset="./assets/logoing.webp" type="image/webp">
-                        <img src="./assets/logoing.png" alt="" width="40" height="40" class="footer__icon">
-                    </picture>
+                    <img src="./assets/logoing.png" alt="" width="40" height="40" class="footer__icon">
                     <span>Instagram</span>
                 </a>
-            </li>
-        </ul>
+            </div>
+            <p class="footer__copyright">&copy; 2024 Giuseppe Castellaneta. Tutti i diritti riservati.</p>
+        </div>
     </footer>
 </body>
 </html>

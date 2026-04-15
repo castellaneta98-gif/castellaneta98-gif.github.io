@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.contact {
+  &__form {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: $spacing-md;
+    @include glassmorphism;
+    border-radius: 0.5rem;
+    
+    .btn-primary {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      
+      &:hover {
+        background-color: darken($color-primary, 10%);
+        border-color: darken($color-primary, 10%);
+      }
+    }
+  }
+}

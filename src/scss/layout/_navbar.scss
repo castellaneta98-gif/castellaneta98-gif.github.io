@@ -4,15 +4,21 @@
 .navbar {
   @include glassmorphism;
   padding: $spacing-sm 0;
+  @include transition-standard;
   
   &__brand {
     font-family: $font-title;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #283593 !important; // Scurito per contrasto (da $color-primary #3f51b5 a #283593)
+    color: #283593 !important;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
     
     &__logo {
-      margin-right: $spacing-xs;
+      width: 2rem;
+      height: 2rem;
+      object-fit: contain;
     }
   }
 
@@ -20,18 +26,25 @@
     display: none;
 
     &:checked ~ .navbar__collapse {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      //display: block; // Keep for layout
     }
 
-    &:checked ~ .navbar__toggler .navbar__toggler-icon {
-      background-image: none;
-      &::before {
-        content: '\2715';
-        color: $color-primary;
-        font-size: 1.5rem;
+    &:checked ~ .navbar__toggler {
+      .navbar__toggler-icon {
+        background-image: none;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &::before {
+          content: '\2715';
+          color: $color-primary;
+          font-size: 1.5rem;
+          line-height: 1;
+        }
       }
     }
   }
@@ -42,9 +55,12 @@
     border: 0.0625rem solid rgba($color-primary, 0.2);
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+    @include flex-center;
+    width: 3rem;
+    height: 2.5rem;
 
     @include respond-to("medium") {
-      display: block;
+      display: flex;
     }
   }
 
@@ -60,15 +76,24 @@
 
   &__collapse {
     @include respond-to("medium") {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-1rem);
+      @include transition-standard;
+      
       width: 100%;
-      background: rgba($color-white, 0.98); // Aumentata opacità per leggibilità
+      background: rgba($color-white, 0.98);
       position: absolute;
       top: 100%;
       left: 0;
       padding: $spacing-md;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      z-index: 1000; // Assicura che sia sopra gli altri elementi
+      z-index: 1000;
+      display: none; // Initial hide
+      
+      &.show { // Use this if we had JS, but we use checkbox.
+        // The checkbox selector handled this above.
+      }
       
       .navbar-nav {
         flex-direction: column;
@@ -83,6 +108,13 @@
         text-align: center;
       }
     }
+  }
+
+  // Update checkbox selector to handle display
+  &__checkbox:checked ~ &__collapse {
+     @include respond-to("medium") {
+        display: block;
+     }
   }
 
   &__link {

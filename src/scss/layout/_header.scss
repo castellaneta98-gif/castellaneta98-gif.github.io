@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  background: linear-gradient(135deg, $color-primary 0%, #764ba2 100%);
+  color: $color-white;
+  padding: $spacing-xl 0;
+  text-align: center;
+  
+  &__title {
+    font-size: 3rem;
+    margin-bottom: $spacing-sm;
+    
+    @include respond-to("medium") {
+      font-size: 2rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+}
