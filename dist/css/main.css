@@ -107,15 +107,14 @@ img {
   border: 0.0625rem solid rgba(63, 81, 181, 0.2);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 3rem;
   height: 2.5rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 62rem) {
   .navbar__toggler {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .navbar__toggler-icon {
@@ -126,7 +125,11 @@ img {
   background-position: center;
   background-size: 100%;
 }
-@media (max-width: 48rem) {
+.navbar__collapse {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 62rem) {
   .navbar__collapse {
     opacity: 0;
     visibility: hidden;
@@ -154,7 +157,7 @@ img {
     text-align: center;
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 62rem) {
   .navbar__checkbox:checked ~ .navbar__collapse {
     display: block;
   }
@@ -304,3 +307,5 @@ img {
   background-color: rgb(49.8319672131, 64.0696721311, 143.1680327869);
   border-color: rgb(49.8319672131, 64.0696721311, 143.1680327869);
 }
+
+/*# sourceMappingURL=main.css.map */

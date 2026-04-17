@@ -55,12 +55,11 @@
     border: 0.0625rem solid rgba($color-primary, 0.2);
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    @include flex-center;
     width: 3rem;
     height: 2.5rem;
 
-    @include respond-to("medium") {
-      display: flex;
+    @include respond-to("large") {
+      @include flex-center;
     }
   }
 
@@ -74,7 +73,10 @@
   }
 
   &__collapse {
-    @include respond-to("medium") {
+    display: flex;
+    align-items: center;
+
+    @include respond-to("large") {
       opacity: 0;
       visibility: hidden;
       transform: translateY(-1rem);
@@ -89,10 +91,6 @@
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
       z-index: 1000;
       display: none; // Initial hide
-      
-      &.show { // Use this if we had JS, but we use checkbox.
-        // The checkbox selector handled this above.
-      }
       
       .navbar-nav {
         flex-direction: column;
@@ -111,7 +109,7 @@
 
   // Update checkbox selector to handle display
   &__checkbox:checked ~ &__collapse {
-     @include respond-to("medium") {
+     @include respond-to("large") {
         display: block;
      }
   }
