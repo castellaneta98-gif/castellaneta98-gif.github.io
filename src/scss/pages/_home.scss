@@ -1,0 +1,96 @@
+// filepath: src/scss/pages/_home.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Home page sections styling with BEM pattern
+.home {
+  &__section {
+    padding: $spacing-lg 0;
+    border-bottom: 0.0625rem solid rgba($color-white, 0.1);
+
+    @include respond-to("medium") {
+      padding: $spacing-md 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__content-box {
+    background: rgba($color-white, 0.05);
+    padding: $spacing-md;
+    border-radius: 0.5rem;
+    border-left: 0.25rem solid $color-primary;
+    @include transition-standard;
+    margin-bottom: $spacing-md;
+
+    @include respond-to("medium") {
+      margin-bottom: 0;
+      margin-right: $spacing-lg;
+    }
+
+    &:hover {
+      background: rgba($color-white, 0.08);
+      transform: translateX(0.25rem);
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+  }
+
+  &__profile-img {
+    @include transition-standard;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // Section-specific styles
+  &__section--about {
+    .home__profile-img {
+      max-width: 350px;
+    }
+  }
+
+  &__section--hobby {
+    img {
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+  &__section--passion {
+    img {
+      max-width: 400px;
+      height: auto;
+    }
+  }
+}
+
+// Responsive adjustments for home sections
+@include respond-to("large") {
+  .home {
+    &__section {
+      padding: $spacing-md 0;
+
+      .row {
+        flex-direction: column;
+
+        .col-md-8,
+        .col-md-4 {
+          flex: 0 0 100%;
+        }
+      }
+    }
+
+    &__profile-img {
+      max-width: 200px !important;
+      margin: 0 auto;
+    }
+  }
+}

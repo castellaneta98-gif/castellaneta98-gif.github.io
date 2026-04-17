@@ -1,0 +1,78 @@
+// filepath: src/scss/pages/_cv.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// CV page styling
+.cv {
+  &__section {
+    padding: $spacing-lg 0;
+
+    @include respond-to("medium") {
+      padding: $spacing-md 0;
+    }
+  }
+
+  &__bio {
+    .row {
+      gap: $spacing-md;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+
+      strong {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__card {
+    transition: all 0.3s ease;
+    border-top: 0.25rem solid $color-primary;
+    
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1rem 2rem rgba($color-primary, 0.15) !important;
+    }
+
+    .card-title {
+      color: $color-primary;
+      margin-bottom: $spacing-sm;
+    }
+
+    .card-text {
+      color: $color-muted;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .badge {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      background-color: $color-primary;
+      
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+  }
+
+  &__info {
+    h3 {
+      color: $color-primary;
+      margin-bottom: $spacing-sm;
+      font-size: 1.1rem;
+    }
+
+    p {
+      color: $color-text;
+      margin: 0;
+    }
+  }
+}

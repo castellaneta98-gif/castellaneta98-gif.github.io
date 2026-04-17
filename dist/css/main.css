@@ -299,13 +299,193 @@ img {
   box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.1);
   border-radius: 0.5rem;
 }
+.contact__form .form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.contact__form .form-control {
+  border: 0.0625rem solid rgba(63, 81, 181, 0.2);
+  border-radius: 0.35rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.contact__form .form-control:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 0.125rem rgba(63, 81, 181, 0.25);
+}
+.contact__form .form-control::placeholder {
+  color: rgba(44, 62, 80, 0.5);
+}
 .contact__form .btn-primary {
   background-color: #3f51b5;
   border-color: #3f51b5;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 .contact__form .btn-primary:hover {
-  background-color: rgb(49.8319672131, 64.0696721311, 143.1680327869);
-  border-color: rgb(49.8319672131, 64.0696721311, 143.1680327869);
+  background-color: #2d3a7e;
+  border-color: #2d3a7e;
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1rem rgba(63, 81, 181, 0.3);
+}
+.contact__form .btn-primary:focus {
+  box-shadow: 0 0 0 0.125rem rgba(63, 81, 181, 0.5);
+}
+.contact__form .needs-validation .form-control:invalid {
+  border-color: #dc3545;
+}
+.contact__form .needs-validation .form-control:invalid:focus {
+  box-shadow: 0 0 0 0.125rem rgba(220, 53, 69, 0.25);
+}
+
+.contact__section {
+  padding: 4rem 0;
+}
+@media (max-width: 48rem) {
+  .contact__section {
+    padding: 2rem 0;
+  }
+}
+
+/* Home Page Styles */
+.home__section {
+  padding: 4rem 0;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+.home__section:last-child {
+  border-bottom: none;
+}
+@media (max-width: 48rem) {
+  .home__section {
+    padding: 2rem 0;
+  }
+}
+
+.home__content-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border-left: 0.25rem solid #3f51b5;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+.home__content-box:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(0.25rem);
+}
+.home__content-box p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+@media (max-width: 48rem) {
+  .home__content-box {
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+
+.home__profile-img {
+  transition: all 0.3s ease-in-out;
+}
+.home__profile-img:hover {
+  transform: scale(1.05);
+}
+
+.home__section--about .home__profile-img {
+  max-width: 350px;
+}
+
+.home__section--hobby img {
+  max-width: 400px;
+  height: auto;
+}
+
+.home__section--passion img {
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 62rem) {
+  .home__section {
+    padding: 2rem 0;
+  }
+  .home__section .row {
+    flex-direction: column;
+  }
+  .home__section .col-md-8,
+  .home__section .col-md-4 {
+    flex: 0 0 100%;
+  }
+  
+  .home__profile-img {
+    max-width: 200px !important;
+    margin: 0 auto;
+  }
+}
+
+/* CV Page Styles */
+.cv__section {
+  padding: 4rem 0;
+}
+@media (max-width: 48rem) {
+  .cv__section {
+    padding: 2rem 0;
+  }
+}
+
+.cv__bio .row {
+  gap: 2rem;
+}
+.cv__bio p {
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+.cv__bio p strong {
+  color: #3f51b5;
+}
+
+.cv__card {
+  transition: all 0.3s ease;
+  border-top: 0.25rem solid #3f51b5;
+}
+.cv__card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(63, 81, 181, 0.15) !important;
+}
+.cv__card .card-title {
+  color: #3f51b5;
+  margin-bottom: 1rem;
+}
+.cv__card .card-text {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.cv__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.cv__skills .badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background-color: #3f51b5;
+}
+.cv__skills .badge:hover {
+  background-color: #2d3a7e;
+}
+
+.cv__info h3 {
+  color: #3f51b5;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.cv__info p {
+  color: #2c3e50;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

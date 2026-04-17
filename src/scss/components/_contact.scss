@@ -1,7 +1,16 @@
+// filepath: src/scss/components/_contact.scss
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 .contact {
+  &__section {
+    padding: $spacing-lg 0;
+
+    @include respond-to("medium") {
+      padding: $spacing-md 0;
+    }
+  }
+
   &__form {
     max-width: 40rem;
     margin: 0 auto;
@@ -9,13 +18,54 @@
     @include glassmorphism;
     border-radius: 0.5rem;
     
+    .form-label {
+      font-weight: 600;
+      color: $color-text;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      border: 0.0625rem solid rgba($color-primary, 0.2);
+      border-radius: 0.35rem;
+      padding: 0.75rem;
+      font-size: 1rem;
+      @include transition-standard;
+
+      &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 0.125rem rgba($color-primary, 0.25);
+      }
+
+      &::placeholder {
+        color: rgba($color-text, 0.5);
+      }
+    }
+
     .btn-primary {
       background-color: $color-primary;
       border-color: $color-primary;
+      font-weight: 600;
+      @include transition-standard;
       
       &:hover {
         background-color: darken($color-primary, 10%);
         border-color: darken($color-primary, 10%);
+        transform: translateY(-0.125rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-primary, 0.3);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.125rem rgba($color-primary, 0.5);
+      }
+    }
+
+    .needs-validation {
+      .form-control:invalid {
+        border-color: #dc3545;
+        
+        &:focus {
+          box-shadow: 0 0 0 0.125rem rgba(220, 53, 69, 0.25);
+        }
       }
     }
   }
